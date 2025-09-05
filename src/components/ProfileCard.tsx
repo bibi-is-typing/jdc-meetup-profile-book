@@ -9,10 +9,10 @@ interface ProfileCardProps {
 
 export const ProfileCard = ({ profile }: ProfileCardProps) => {
   const renderSocialIcon = (type: string, url: string) => {
-    const iconSize = 16;
+    const iconSize = 20;
     const iconProps = { 
       size: iconSize, 
-      className: "text-black transition-colors" 
+      className: "text-white transition-all duration-200" 
     };
 
     switch (type) {
@@ -85,13 +85,13 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
             </div>
           </div>
           {getSocialLinks().length > 0 && (
-            <div className="flex gap-1 ml-3">
+            <div className="flex gap-2 ml-3">
               {getSocialLinks().map(({ type, url, icon }, index) => (
                 <Button
                   key={index}
                   variant="ghost"
                   size="sm"
-                  className={`h-8 w-8 p-0 rounded-lg hover:bg-primary/10 hover:text-primary text-black focus:shadow-focus transition-all`}
+                  className={`h-10 w-10 p-0 rounded-full bg-black hover:bg-gray-800 hover:scale-110 transition-all duration-200 shadow-lg`}
                   asChild
                 >
                   <a 
