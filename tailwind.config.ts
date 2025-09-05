@@ -22,7 +22,7 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
+				background: 'var(--gradient-main)',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -58,14 +58,30 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
-					hover: 'hsl(var(--card-hover))'
+					hover: 'hsl(var(--card-hover))',
+					glass: 'hsl(var(--card-glass))',
+					mentor: 'hsl(var(--card-mentor))'
 				},
 				// JDC Brand Colors
 				'neon-green': 'hsl(var(--neon-green))',
+				'neon-green-light': 'hsl(var(--neon-green-light))',
 				'light-blue': 'hsl(var(--light-blue))',
 				'coral-pink': 'hsl(var(--coral-pink))',
 				'bright-yellow': 'hsl(var(--bright-yellow))',
 				'pure-black': 'hsl(var(--pure-black))',
+				'pure-white': 'hsl(var(--pure-white))',
+				
+				// Cohort Colors
+				'crafton-jungle': 'hsl(var(--crafton-jungle))',
+				'sw-academy': 'hsl(var(--sw-academy))',
+				'game-lab': 'hsl(var(--game-lab))',
+				'mentor-color': 'hsl(var(--mentor))',
+				
+				// Role Colors
+				'role-backend': 'hsl(var(--role-backend))',
+				'role-frontend': 'hsl(var(--role-frontend))',
+				'role-gamedev': 'hsl(var(--role-gamedev))',
+				'role-fullstack': 'hsl(var(--role-fullstack))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

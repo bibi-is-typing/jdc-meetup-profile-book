@@ -7,16 +7,16 @@ export const Header = () => {
         <div className="flex justify-center mb-4">
           <Badge 
             variant="secondary" 
-            className="px-4 py-2 text-sm bg-secondary/20 backdrop-blur-sm border border-secondary/30"
+            className="px-4 py-2 text-sm glass-effect border-white/30 text-foreground"
           >
             JDC Meetup 2024
           </Badge>
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight drop-shadow-sm">
           정글 개발자 커뮤니티
           <br />
-          <span className="gradient-vibrant bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-highlight to-coral-pink bg-clip-text text-transparent">
             프로필 북
           </span>
         </h1>
@@ -27,8 +27,10 @@ export const Header = () => {
           새로운 인연과 협업의 기회를 찾아보세요.
         </p>
         
-        <div className="mt-8 flex justify-center">
-          <div className="h-1 w-24 bg-gradient-vibrant rounded-full shadow-neon"></div>
+        <div className="mt-8 flex justify-center items-center gap-4">
+          <div className="h-1 w-16 bg-gradient-to-r from-highlight to-coral-pink rounded-full"></div>
+          <span className="text-2xl">🌟</span>
+          <div className="h-1 w-16 bg-gradient-to-r from-coral-pink to-highlight rounded-full"></div>
         </div>
       </div>
     </header>

@@ -22,19 +22,21 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen gradient-main">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         <Header />
         
         <div className="mb-8">
-          <FilterSection
-            selectedCohort={selectedCohort}
-            selectedRole={selectedRole}
-            onCohortChange={setSelectedCohort}
-            onRoleChange={setSelectedRole}
-            onClearFilters={handleClearFilters}
-            resultCount={filteredProfiles.length}
-          />
+          <div className="glass-effect rounded-2xl p-6">
+            <FilterSection
+              selectedCohort={selectedCohort}
+              selectedRole={selectedRole}
+              onCohortChange={setSelectedCohort}
+              onRoleChange={setSelectedRole}
+              onClearFilters={handleClearFilters}
+              resultCount={filteredProfiles.length}
+            />
+          </div>
         </div>
 
         <main>
@@ -46,18 +48,18 @@ const Index = () => {
             </div>
           ) : (
             <div className="text-center py-16">
-              <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto">
+              <div className="glass-effect rounded-2xl p-8 max-w-md mx-auto">
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   검색 결과가 없습니다
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground/80 mb-6">
                   선택하신 조건에 맞는 프로필을 찾을 수 없어요.
                   <br />
                   다른 조건으로 검색해보세요.
                 </p>
                 <button
                   onClick={handleClearFilters}
-                  className="text-primary hover:text-primary-hover font-medium transition-smooth"
+                  className="text-highlight hover:text-highlight/80 font-medium transition-smooth focus:shadow-focus px-4 py-2 rounded-lg"
                 >
                   모든 필터 초기화 →
                 </button>
@@ -67,8 +69,8 @@ const Index = () => {
         </main>
 
         <footer className="mt-16 py-8 text-center">
-          <div className="border-t border-border/30 pt-8">
-            <p className="text-muted-foreground text-sm">
+          <div className="border-t border-white/20 pt-8">
+            <p className="text-foreground/70 text-sm">
               JDC Meetup Profile Book • 정글 개발자 커뮤니티
             </p>
           </div>

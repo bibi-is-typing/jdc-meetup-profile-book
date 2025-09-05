@@ -24,18 +24,24 @@ export const FilterSection = ({
   const hasActiveFilters = selectedCohort !== "전체" || selectedRole !== "전체";
 
   return (
-    <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-card border border-white/20">
+    <div>
       <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
         <div className="flex flex-col sm:flex-row gap-4 flex-1">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-foreground">수료 기수</label>
+            <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+              🎓 수료 기수
+            </label>
             <Select value={selectedCohort} onValueChange={onCohortChange}>
-              <SelectTrigger className="w-full sm:w-[200px] bg-background border-border">
+              <SelectTrigger className="w-full sm:w-[200px] bg-white/90 border-white/30 focus:shadow-focus transition-all">
                 <SelectValue placeholder="기수 선택" />
               </SelectTrigger>
-              <SelectContent className="bg-popover border-border">
+              <SelectContent className="bg-white border-gray-200">
                 {cohorts.map((cohort) => (
-                  <SelectItem key={cohort} value={cohort}>
+                  <SelectItem 
+                    key={cohort} 
+                    value={cohort}
+                    className="focus:bg-primary/10 focus:text-primary"
+                  >
                     {cohort}
                   </SelectItem>
                 ))}
@@ -44,14 +50,20 @@ export const FilterSection = ({
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-foreground">직무</label>
+            <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+              💼 직무
+            </label>
             <Select value={selectedRole} onValueChange={onRoleChange}>
-              <SelectTrigger className="w-full sm:w-[250px] bg-background border-border">
+              <SelectTrigger className="w-full sm:w-[250px] bg-white/90 border-white/30 focus:shadow-focus transition-all">
                 <SelectValue placeholder="직무 선택" />
               </SelectTrigger>
-              <SelectContent className="bg-popover border-border max-h-[300px]">
+              <SelectContent className="bg-white border-gray-200 max-h-[300px]">
                 {roles.map((role) => (
-                  <SelectItem key={role} value={role}>
+                  <SelectItem 
+                    key={role} 
+                    value={role}
+                    className="focus:bg-primary/10 focus:text-primary"
+                  >
                     {role}
                   </SelectItem>
                 ))}
@@ -61,8 +73,8 @@ export const FilterSection = ({
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            <Badge variant="secondary" className="bg-highlight text-highlight-foreground">
+          <div className="text-sm text-foreground/80 flex items-center gap-2">
+            <Badge variant="secondary" className="bg-highlight text-highlight-foreground font-medium">
               {resultCount}명
             </Badge>
             의 프로필
@@ -73,7 +85,7 @@ export const FilterSection = ({
               variant="outline"
               size="sm"
               onClick={onClearFilters}
-              className="gap-2 border-muted hover:bg-destructive/10 hover:text-destructive hover:border-destructive"
+              className="gap-2 bg-white/80 border-white/30 hover:bg-red-50 hover:text-red-600 hover:border-red-200 focus:shadow-focus transition-all"
             >
               <X size={14} />
               필터 초기화
@@ -85,22 +97,22 @@ export const FilterSection = ({
       {hasActiveFilters && (
         <div className="flex gap-2 mt-4 flex-wrap">
           {selectedCohort !== "전체" && (
-            <Badge variant="secondary" className="gap-2">
+            <Badge variant="secondary" className="gap-2 bg-white/80 text-foreground border-white/30">
               기수: {selectedCohort}
               <button
                 onClick={() => onCohortChange("전체")}
-                className="hover:text-destructive"
+                className="hover:text-red-600 transition-colors"
               >
                 <X size={12} />
               </button>
             </Badge>
           )}
           {selectedRole !== "전체" && (
-            <Badge variant="secondary" className="gap-2">
+            <Badge variant="secondary" className="gap-2 bg-white/80 text-foreground border-white/30">
               직무: {selectedRole}
               <button
                 onClick={() => onRoleChange("전체")}
-                className="hover:text-destructive"
+                className="hover:text-red-600 transition-colors"
               >
                 <X size={12} />
               </button>
