@@ -40,12 +40,12 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
     }));
   };
 
-  const getCohortBorderClass = () => {
-    if (profile.cohort.includes("크래프톤")) return "border-crafton";
-    if (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어")) return "border-sw-academy";
-    if (profile.cohort.includes("게임")) return "border-game-lab";
-    if (profile.cohort.includes("멘토")) return "border-mentor";
-    return "border-crafton";
+  const getCohortBackgroundClass = () => {
+    if (profile.cohort.includes("크래프톤")) return "bg-light-blue";
+    if (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어")) return "bg-coral-pink";
+    if (profile.cohort.includes("게임")) return "bg-bright-yellow";
+    if (profile.cohort.includes("멘토")) return "gradient-mentor";
+    return "bg-light-blue";
   };
 
   const getRoleColor = () => {
@@ -60,13 +60,13 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
   
   const cardClassName = isMentor 
     ? "h-full transition-card hover:shadow-hover gradient-mentor shadow-glass group cursor-pointer hover:scale-[1.02]"
-    : "h-full transition-card hover:shadow-hover bg-card shadow-card group cursor-pointer hover:scale-[1.02] hover:bg-card-hover";
+    : `h-full transition-card hover:shadow-hover ${getCohortBackgroundClass()} shadow-card group cursor-pointer hover:scale-[1.02]`;
 
-  const textColor = isMentor ? "text-white" : "text-card-foreground";
-  const mutedTextColor = isMentor ? "text-white/70" : "text-muted-foreground";
+  const textColor = isMentor ? "text-white" : "text-pure-black";
+  const mutedTextColor = isMentor ? "text-white/70" : "text-pure-black/70";
 
   return (
-    <Card className={`${cardClassName} ${getCohortBorderClass()} border-0 overflow-hidden`}>
+    <Card className={`${cardClassName} border-0 overflow-hidden`}>
       <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
       
       <CardHeader className="space-y-3 relative z-10">
