@@ -116,11 +116,6 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
           </p>
         </div>
         
-        <div className={`pt-3 border-t border-black`}>
-          <p className={`text-m ${mutedTextColor} italic leading-relaxed`}>
-            💬 매칭 희망: {profile.matchingPreference || "특별한 선호사항 없음"}
-          </p>
-        </div>
       </CardContent>
     </Card>
   );

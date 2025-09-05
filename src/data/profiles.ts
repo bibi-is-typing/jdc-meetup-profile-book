@@ -11,7 +11,6 @@ export interface Profile {
     instagram?: string;
     other?: string;
   };
-  matchingPreference?: string;
 }
 
 export const profiles: Profile[] = [
@@ -24,7 +23,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/dev-diver"
     },
-    matchingPreference: "게임 개발에 관심이 많은 분들, 게임테크 랩보다 게임랩 분들을 만나보고 싶어요. 개발자 뿐 아니라 (오신다면) 디자이너, 기획자분들도 뵈면 좋을 것 같습니다."
   },
   {
     id: "2",
@@ -35,7 +33,6 @@ export const profiles: Profile[] = [
     links: {
       website: "https://www.choiwheatley.com"
     },
-    matchingPreference: "도메인주도개발에 심취한 개발자"
   },
   {
     id: "3",
@@ -46,7 +43,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/develsvai"
     },
-    matchingPreference: "권한비 님과 같이 할수 있으면 좋겠습니다! 비교적 처음 보는 사람들이 많으면 어색함을 많이 느껴서 비교적 같은 기수였던 한비님과 같이 매칭 되면 좋을거 같습니다!"
   },
   {
     id: "4",
@@ -57,7 +53,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/jaenam615"
     },
-    matchingPreference: "백엔드 분들"
   },
   {
     id: "5",
@@ -65,7 +60,6 @@ export const profiles: Profile[] = [
     cohort: "크래프톤 정글 2기",
     role: "언리얼 게임 클라이언트 취준생",
     introduction: "언리얼 게임 클라이언트를 희망합니다",
-    matchingPreference: "언리얼 게임 엔진쪽 희망하시는 멤버분들이 1순위고, 없다면 포괄적으로 게임 개발자 희망하시는 분들이랑 매칭됐으면 좋겠습니다."
   },
   {
     id: "6",
@@ -76,7 +70,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/urbanmaid"
     },
-    matchingPreference: "인디게임 개발 경험이나 릴리즈 경험 있는 사람"
   },
   {
     id: "7",
@@ -84,7 +77,6 @@ export const profiles: Profile[] = [
     cohort: "게임랩 1기",
     role: "게임 기획자",
     introduction: "열심히 인디 게임 만들고 있는 게임 개발자 안준형입니다",
-    matchingPreference: "게임 프로젝트에 관심 있으신 분, 창업을 목표하시는분"
   },
   {
     id: "8",
@@ -92,7 +84,6 @@ export const profiles: Profile[] = [
     cohort: "게임랩 1기",
     role: "게임 개발자",
     introduction: "슈퍼크리에이티브 재직",
-    matchingPreference: "인디게임 개발보다는 게임회사 재직 또는 지망이신 분들과 매칭 희망합니다"
   },
   {
     id: "9",
@@ -103,7 +94,6 @@ export const profiles: Profile[] = [
     links: {
       instagram: "https://www.instagram.com/lorkhan_kr"
     },
-    matchingPreference: "같은 직군에서 근무하시거나 같은 직군을 희망하시는 분들, 게임을 좋아하시는 분들과 같이 매칭되고 싶습니다."
   },
   {
     id: "10",
@@ -121,7 +111,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/InfraWhale"
     },
-    matchingPreference: "백엔드 혹은 풀스택 분야에서 활동중인 멤버와 매칭되고 싶습니다."
   },
   {
     id: "12",
@@ -132,7 +121,6 @@ export const profiles: Profile[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/강민-백-702a40261"
     },
-    matchingPreference: "게임개발자들과 매칭되면 좋겠습니다."
   },
   {
     id: "13",
@@ -143,7 +131,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/loopy-lim"
     },
-    matchingPreference: "프론트엔드 개발자/AI를 더 활용을 잘하려고 하는 사람/프론트엔드를 기반으로 다양한 것을 하려는 사람/새로운 기술을 지속해서 따라가고 있는 사람"
   },
   {
     id: "14",
@@ -154,7 +141,6 @@ export const profiles: Profile[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/ventran"
     },
-    matchingPreference: "게임 디자인에 관심이 있는 분들이나 게임 회사에 입사를 고려하고 계신 지망생 분들과 만나면 좋겠습니다."
   },
   {
     id: "15",
@@ -172,7 +158,6 @@ export const profiles: Profile[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/jonghyeonchang"
     },
-    matchingPreference: "특별히 게임테크랩 분들과 교류하고 싶습니다. SW사관학교 정글 선배님들, 크래프톤 정글 분들도 좋아요."
   },
   {
     id: "17",
@@ -183,7 +168,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/chenjingdev"
     },
-    matchingPreference: "키보드 좋아하는 사람, LLM활용 좋아하시는분"
   },
   {
     id: "18",
@@ -191,7 +175,6 @@ export const profiles: Profile[] = [
     cohort: "sw사관학교 정글 7기",
     role: "웹 풀스택, DevOps",
     introduction: "제조업의 IT 팀에서 일하고 있는 이유정이라고 합니다! 웹 풀스택 개발을 하며, DevOps 및 인프라 아키텍처 설계도 하고있습니다. 8월부로 딱 입사 1년이 되었습니다.",
-    matchingPreference: "게임 도메인에서 일하시는 분들, 웹 백엔드 개발, DevOps 분들과 교류하고 싶습니다!"
   },
   {
     id: "19",
@@ -199,7 +182,6 @@ export const profiles: Profile[] = [
     cohort: "SW사관학교 정글 1기",
     role: "백엔드 개발자",
     introduction: "FE, BE 두 분야의 경력을 모두 가지고 있는 4년차 웹 개발자입니다. 창업과 AI에 관심이 많습니다",
-    matchingPreference: "창업에 관심이 많은 멤버, 혹은 근래의 AI 발전과 관련해 고민이 많은 멤버"
   },
   {
     id: "20",
@@ -210,7 +192,6 @@ export const profiles: Profile[] = [
     links: {
       other: "https://x.com/MKstudio0404"
     },
-    matchingPreference: "인디게임 개발자"
   },
   {
     id: "21",
@@ -218,7 +199,6 @@ export const profiles: Profile[] = [
     cohort: "크래프톤 정글 6기",
     role: "1인 창업 및 개발",
     introduction: "AI를 적극 활용해 새로운 분야에 과감히 뛰어드는 개발자를 목표로 합니다.",
-    matchingPreference: "ai를 개발 현업에 적극 사용하고 있는 사람. 창업 중이거나 경험이 있는 사람."
   },
   {
     id: "22",
@@ -229,7 +209,6 @@ export const profiles: Profile[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/hanbi-kwon/"
     },
-    matchingPreference: "마음이 어지러운 중생이라면 누구나 환영입니다!"
   },
   {
     id: "23",
@@ -240,7 +219,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/Yeram522"
     },
-    matchingPreference: "백엔드 개발자 분들과 매칭 되고 싶어요!"
   },
   {
     id: "24",
@@ -248,7 +226,6 @@ export const profiles: Profile[] = [
     cohort: "크래프톤 정글 6기",
     role: "게임 클라이언트 개발 취준생",
     introduction: "게임 클라이언트 개발과 엔진 개발에 관심이 많은 취준생입니다. 아직 대학 졸업은 하지 않은...",
-    matchingPreference: "게임 산업 관련된 분들과 매칭을 기대합니다"
   },
   {
     id: "25",
@@ -259,7 +236,6 @@ export const profiles: Profile[] = [
     links: {
       other: "https://velog.io/@tonny0305/posts"
     },
-    matchingPreference: "게임업계에서 일하시고 계시는 분들"
   },
   {
     id: "26",
@@ -270,7 +246,6 @@ export const profiles: Profile[] = [
     links: {
       github: "https://github.com/hyeong1"
     },
-    matchingPreference: "다양한 산업에서 일하시거나 일하고 싶으신 분들과 매칭되고 싶습니다. 개발자가 아닌 분들도 좋습니다!"
   }
 ];
 
