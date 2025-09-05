@@ -7,8 +7,8 @@
 @layer base {
   :root {
     /* JDC Brand Colors - Enhanced Palette */
-    --neon-green: 147 100% 56%; /* #00FF88 */
-    --neon-green-light: 150 100% 65%; /* #00E676 */
+    --neon-green: 135 100% 52%; /* #09FE5E */
+    --neon-green-light: 135 100% 60%; /* #33FE7A */
     --light-blue: 208 59% 73%; /* #87CEEB */
     --coral-pink: 328 100% 71%; /* #FF69B4 */
     --bright-yellow: 51 100% 50%; /* #FFD700 */
@@ -16,9 +16,9 @@
     --pure-white: 0 0% 100%; /* #FFFFFF */
     
     /* Cohort Colors */
-    --crafton-jungle: 208 59% 73%; /* #87CEEB - Light Blue */
-    --sw-academy: 328 100% 71%; /* #FF69B4 - Coral Pink */
-    --game-lab: 51 100% 50%; /* #FFD700 - Bright Yellow */
+    --crafton-jungle: 194 100% 74%; /* #78E8FF - Light Blue */
+    --sw-academy: 328 100% 82%; /* #FFADCE - Light Pink */
+    --game-lab: 48 98% 65%; /* #FDD551 - Golden Yellow */
     --mentor: 28 85% 67%; /* #F39C12 - Gold Orange */
     
     /* Role Colors */
@@ -31,11 +31,11 @@
     --background: linear-gradient(135deg, hsl(var(--neon-green)) 0%, hsl(var(--neon-green-light)) 100%);
     --foreground: var(--pure-black);
 
-    --card: var(--pure-white);
+    --card: transparent;
     --card-foreground: var(--pure-black);
-    --card-hover: 0 0% 98%;
-    --card-glass: 0 0% 100% / 0.9;
-    --card-mentor: 0 0% 0% / 0.8;
+    --card-hover: transparent;
+    --card-glass: transparent;
+    --card-mentor: transparent;
 
     --popover: var(--pure-white);
     --popover-foreground: var(--pure-black);
@@ -72,7 +72,7 @@
     --gradient-overlay: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     --gradient-card: linear-gradient(to bottom right, hsl(var(--pure-white)), hsl(0 0% 98%));
     --gradient-glass: linear-gradient(to bottom right, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
-    --gradient-mentor: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    --gradient-mentor: linear-gradient(to bottom right, rgba(243, 244, 246, 0.9), rgba(229, 231, 235, 0.95));
     
     /* Enhanced shadows */
     --shadow-card: 0 4px 20px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
@@ -200,11 +200,28 @@
     border-left: 5px solid hsl(var(--mentor));
   }
   
-  /* Glass morphism effect */
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Clean minimal styles */
+  .clean-card {
+    border: none;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .clean-badge {
+    border: none;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .clean-select {
+    border: none;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .clean-button {
+    border: none;
+    box-shadow: none;
+    transform: none;
   }
 }

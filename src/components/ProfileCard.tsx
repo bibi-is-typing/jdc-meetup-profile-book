@@ -1,6 +1,5 @@
 import { Github, Linkedin, Globe, Instagram, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Profile } from "@/data/profiles";
 
@@ -13,7 +12,7 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
     const iconSize = 16;
     const iconProps = { 
       size: iconSize, 
-      className: "text-current transition-colors" 
+      className: "text-black transition-colors" 
     };
 
     switch (type) {
@@ -48,13 +47,14 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
     return "bg-light-blue";
   };
 
-  const getRoleColor = () => {
-    const role = profile.role.toLowerCase();
-    if (role.includes("백엔드") || role.includes("be")) return "bg-role-backend text-white";
-    if (role.includes("프론트") || role.includes("fe")) return "bg-role-frontend text-white";
-    if (role.includes("게임")) return "bg-role-gamedev text-white";
-    return "bg-role-fullstack text-white";
+  const getCohortTagColor = () => {
+    return "bg-gray-100 text-black";
   };
+
+  const getRoleTagColor = () => {
+    return "bg-black text-white";
+  };
+
 
   const isMentor = profile.cohort.includes("멘토");
   
@@ -62,31 +62,26 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
     ? "h-full transition-card hover:shadow-hover gradient-mentor shadow-glass group cursor-pointer hover:scale-[1.02]"
     : `h-full transition-card hover:shadow-hover ${getCohortBackgroundClass()} shadow-card group cursor-pointer hover:scale-[1.02]`;
 
-  const textColor = isMentor ? "text-white" : "text-pure-black";
-  const mutedTextColor = isMentor ? "text-white/70" : "text-pure-black/70";
+  const textColor = "text-black";
+  const mutedTextColor = "text-black";
 
   return (
-    <Card className={`${cardClassName} border-0 overflow-hidden`}>
+    <Card className={`${cardClassName} clean-card overflow-hidden`}>
       <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
       
       <CardHeader className="space-y-3 relative z-10">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h3 className={`text-xl font-bold ${textColor} leading-tight`}>
+            <h3 className={`text-4xl font-bold ${textColor} leading-tight`}>
               {profile.name}
             </h3>
             <div className="flex items-center gap-2 mt-2 flex-wrap">
-              <Badge 
-                variant="secondary" 
-                className={`text-xs font-medium ${isMentor ? 'bg-white/20 text-white border-white/30' : 'bg-muted/50'}`}
-              >
+              <div className={`clean-button px-3 py-1 text-s font-medium rounded-md ${getCohortTagColor()}`}>
                 {profile.cohort}
-              </Badge>
-              <Badge 
-                className={`text-xs font-medium px-2 py-1 ${getRoleColor()}`}
-              >
+              </div>
+              <div className={`clean-button px-3 py-1 text-s font-medium rounded-md ${getRoleTagColor()}`}>
                 {profile.role}
-              </Badge>
+              </div>
             </div>
           </div>
           {getSocialLinks().length > 0 && (
@@ -96,11 +91,7 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
                   key={index}
                   variant="ghost"
                   size="sm"
-                  className={`h-8 w-8 p-0 rounded-lg ${
-                    isMentor 
-                      ? 'hover:bg-white/10 text-white/80 hover:text-white focus:shadow-focus' 
-                      : 'hover:bg-primary/10 hover:text-primary text-muted-foreground focus:shadow-focus'
-                  } transition-all`}
+                  className={`h-8 w-8 p-0 rounded-lg hover:bg-primary/10 hover:text-primary text-black focus:shadow-focus transition-all`}
                   asChild
                 >
                   <a 
@@ -120,18 +111,16 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
       
       <CardContent className="space-y-4 relative z-10">
         <div>
-          <p className={`text-sm ${mutedTextColor} leading-relaxed`}>
+          <p className={`text-xl ${mutedTextColor} leading-relaxed`}>
             {profile.introduction}
           </p>
         </div>
         
-        {profile.matchingPreference && (
-          <div className={`pt-3 border-t ${isMentor ? 'border-white/20' : 'border-border/50'}`}>
-            <p className={`text-xs ${mutedTextColor} italic leading-relaxed`}>
-              💬 매칭 희망: {profile.matchingPreference}
-            </p>
-          </div>
-        )}
+        <div className={`pt-3 border-t border-black`}>
+          <p className={`text-m ${mutedTextColor} italic leading-relaxed`}>
+            💬 매칭 희망: {profile.matchingPreference || "특별한 선호사항 없음"}
+          </p>
+        </div>
       </CardContent>
     </Card>
   );
