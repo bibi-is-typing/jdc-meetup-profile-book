@@ -72,7 +72,7 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
       <CardHeader className="space-y-3 relative z-10">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <h3 className={`text-xl font-bold ${textColor} group-hover:text-highlight transition-colors leading-tight`}>
+            <h3 className={`text-xl font-bold ${textColor} leading-tight`}>
               {profile.name}
             </h3>
             <div className="flex items-center gap-2 mt-2 flex-wrap">

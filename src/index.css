@@ -16,9 +16,9 @@
     --pure-white: 0 0% 100%; /* #FFFFFF */
     
     /* Cohort Colors */
-    --crafton-jungle: 0 0% 0%; /* #000000 - Black for strength */
-    --sw-academy: 214 80% 58%; /* #4A90E2 - Soft Blue */
-    --game-lab: 8 82% 69%; /* #FF6B6B - Coral Red */
+    --crafton-jungle: 208 59% 73%; /* #87CEEB - Light Blue */
+    --sw-academy: 328 100% 71%; /* #FF69B4 - Coral Pink */
+    --game-lab: 51 100% 50%; /* #FFD700 - Bright Yellow */
     --mentor: 28 85% 67%; /* #F39C12 - Gold Orange */
     
     /* Role Colors */
