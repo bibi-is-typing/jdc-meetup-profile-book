@@ -2,8 +2,6 @@ import { useState, useMemo } from "react";
 import { Header } from "@/components/Header";
 import { FilterSection } from "@/components/FilterSection";
 import { ProfileCard } from "@/components/ProfileCard";
-import { Badge } from "@/components/ui/badge";
-import { X } from "lucide-react";
 import { profiles } from "@/data/profiles";
 
 const Index = () => {
@@ -85,37 +83,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              
-              {/* 활성 필터 표시 */}
-              {hasActiveFilters && (
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  {selectedCohort !== "전체" && (
-                    <Badge variant="secondary" className="gap-2 bg-blue-100 text-blue-800 clean-badge border-blue-200">
-                      🎓 {selectedCohort === "크래프톤" ? "크래프톤 정글" : 
-                          selectedCohort === "SW" ? "SW 사관학교" : 
-                          selectedCohort === "게임랩" ? "게임랩" :
-                          selectedCohort}
-                      <button
-                        onClick={() => setSelectedCohort("전체")}
-                        className="hover:text-red-600 transition-colors"
-                      >
-                        <X size={12} />
-                      </button>
-                    </Badge>
-                  )}
-                  {selectedRole !== "전체" && (
-                    <Badge variant="secondary" className="gap-2 bg-green-100 text-green-800 clean-badge border-green-200">
-                      💼 {selectedRole}
-                      <button
-                        onClick={() => setSelectedRole("전체")}
-                        className="hover:text-red-600 transition-colors"
-                      >
-                        <X size={12} />
-                      </button>
-                    </Badge>
-                  )}
-                </div>
-              )}
             </div>
 
             {/* 프로필 카드 그리드 */}

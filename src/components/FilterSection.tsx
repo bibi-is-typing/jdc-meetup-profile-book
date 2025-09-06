@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 import { roles, cohortFilters } from "@/data/profiles";
 
@@ -79,18 +80,51 @@ export const FilterSection = ({
         </div>
       </div>
 
-      {/* 필터 초기화 */}
+      {/* 활성 필터 표시 */}
       {hasActiveFilters && (
-        <div className="flex justify-end pt-2">
-          <Button
-            variant="outline"
-            size="default"
-            onClick={onClearFilters}
-            className="gap-2 bg-red-100 clean-button hover:bg-red-200 text-red-700 border-red-300 px-4 py-2 text-base font-medium rounded-md"
-          >
-            <X size={14} />
-            필터 초기화
-          </Button>
+        <div className="space-y-4 pt-4">
+          <div className="border-t border-black"></div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold text-black">🏷️ 선택된 필터</h3>
+              <Button
+                variant="outline"
+                size="default"
+                onClick={onClearFilters}
+                className="gap-2 bg-red-100 clean-button hover:bg-red-200 text-red-700 border-red-300 px-4 py-2 text-base font-medium rounded-md"
+              >
+                <X size={12} />
+                모두 지우기
+              </Button>
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              {selectedCohort !== "전체" && (
+                <Badge variant="secondary" className="gap-2 bg-blue-100 text-blue-800 clean-badge border-blue-200 px-4 py-2 text-base rounded-md">
+                  🎓 {selectedCohort === "크래프톤" ? "크래프톤 정글" : 
+                      selectedCohort === "SW" ? "SW 사관학교" : 
+                      selectedCohort === "게임랩" ? "게임랩" :
+                      selectedCohort}
+                  <button
+                    onClick={() => onCohortChange("전체")}
+                    className="hover:text-red-600 transition-colors"
+                  >
+                    <X size={14} />
+                  </button>
+                </Badge>
+              )}
+              {selectedRole !== "전체" && (
+                <Badge variant="secondary" className="gap-2 bg-green-100 text-green-800 clean-badge border-green-200 px-4 py-2 text-base rounded-md">
+                  💼 {selectedRole}
+                  <button
+                    onClick={() => onRoleChange("전체")}
+                    className="hover:text-red-600 transition-colors"
+                  >
+                    <X size={14} />
+                  </button>
+                </Badge>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </div>
