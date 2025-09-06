@@ -47,7 +47,7 @@ const Index = () => {
         <Header />
         
         <div className="mb-12">
-          <div className="bg-white/20 rounded-2xl p-6">
+          <div className="bg-white/30 rounded-2xl p-6 shadow-lg backdrop-blur-sm">
             <FilterSection
               selectedCohort={selectedCohort}
               selectedRole={selectedRole}
@@ -60,7 +60,7 @@ const Index = () => {
 
         <main>
           {/* 검색 결과 전체 컨테이너 */}
-          <div className="bg-white/20 rounded-2xl p-6">
+          <div className="bg-white/35 rounded-2xl p-6 shadow-xl backdrop-blur-sm border border-white/10">
             {/* 검색 결과 헤더 */}
             <div className="mb-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -94,7 +94,7 @@ const Index = () => {
               </div>
             ) : (
               <div className="text-center py-16">
-                <div className="bg-white/10 rounded-2xl p-8 max-w-md mx-auto">
+                <div className="bg-white/25 rounded-2xl p-8 max-w-md mx-auto shadow-lg backdrop-blur-sm border border-white/20">
                   <div className="text-6xl mb-4">😔</div>
                   <h3 className="text-2xl font-bold text-black mb-4">
                     검색 결과가 없습니다
