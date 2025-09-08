@@ -24,7 +24,7 @@ const Index = () => {
       // 코호트 매칭 로직 수정
       const cohortMatch = selectedCohort === "전체" || 
         (selectedCohort === "크래프톤" && profile.cohort.includes("크래프톤")) ||
-        (selectedCohort === "SW" && (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어"))) ||
+        (selectedCohort === "SW" && (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어") || profile.cohort.includes("sw사관학교"))) ||
         (selectedCohort === "게임랩" && profile.cohort.includes("게임랩")) ||
         (selectedCohort === "멘토" && profile.cohort.includes("멘토"));
       

@@ -41,7 +41,7 @@ export const ProfileCard = ({ profile }: ProfileCardProps) => {
 
   const getCohortBackgroundClass = () => {
     if (profile.cohort.includes("크래프톤")) return "bg-light-blue";
-    if (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어")) return "bg-coral-pink";
+    if (profile.cohort.includes("SW") || profile.cohort.includes("소프트웨어") || profile.cohort.includes("sw사관학교")) return "bg-coral-pink";
     if (profile.cohort.includes("게임")) return "bg-bright-yellow";
     if (profile.cohort.includes("멘토")) return "gradient-mentor";
     return "bg-light-blue";
