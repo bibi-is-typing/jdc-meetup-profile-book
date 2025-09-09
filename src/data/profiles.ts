@@ -181,7 +181,7 @@ export const profiles: Profile[] = [
     name: "조영후",
     cohort: "SW사관학교 정글 1기",
     role: "백엔드 개발자",
-    introduction: "FE, BE 두 분야의 경력을 모두 가지고 있는 4년차 웹 개발자입니다. 창업과 AI에 관심이 많습니다",
+    introduction: "FE와 BE 경력을 함께 쌓아가고 있는 4년차 웹 개발자입니다. 서비스 기획에도 관심이 많습니다.",
   },
   {
     id: "20",
