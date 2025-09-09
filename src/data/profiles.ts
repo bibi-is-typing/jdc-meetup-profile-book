@@ -31,7 +31,7 @@ export const profiles: Profile[] = [
     role: "백엔드 개발자",
     introduction: "옵시디언, 도메인주도개발, 이벤트 소싱 전도사",
     links: {
-      website: "https://www.choiwheatley.com"
+      website: "https://www.choiwheatley.xyz/"
     },
   },
   {
