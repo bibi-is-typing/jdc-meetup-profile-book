@@ -79,13 +79,6 @@ export const profiles: Profile[] = [
     introduction: "열심히 인디 게임 만들고 있는 게임 개발자 안준형입니다",
   },
   {
-    id: "8",
-    name: "나병한",
-    cohort: "게임랩 1기",
-    role: "게임 개발자",
-    introduction: "슈퍼크리에이티브 재직",
-  },
-  {
     id: "9",
     name: "이승민",
     cohort: "크래프톤 정글 6기",
