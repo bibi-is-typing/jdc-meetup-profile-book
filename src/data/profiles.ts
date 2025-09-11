@@ -62,16 +62,6 @@ export const profiles: Profile[] = [
     introduction: "언리얼 게임 클라이언트를 희망합니다",
   },
   {
-    id: "6",
-    name: "박강",
-    cohort: "게임랩 3기",
-    role: "게임 프로그래머, 게임 기획자",
-    introduction: "인디 게임 개발 지망생",
-    links: {
-      github: "https://github.com/urbanmaid"
-    },
-  },
-  {
     id: "7",
     name: "안준형",
     cohort: "게임랩 1기",
