@@ -133,16 +133,6 @@ export const profiles: Profile[] = [
     introduction: "정글 1기 장홍표입니다."
   },
   {
-    id: "16",
-    name: "장종현",
-    cohort: "SW사관학교 정글 7기",
-    role: "XR 취준생",
-    introduction: "현재 애플 visionOS 앱 하나를 개발 중입니다. 건축학전공 + iOS 공부 후 VR게임회사에서 공간디자이너 및 Unity개발자로 커리어를 시작했다가 사정이 생겨 다시 취준을 하게 되었습니다.",
-    links: {
-      linkedin: "https://www.linkedin.com/in/jonghyeonchang"
-    },
-  },
-  {
     id: "17",
     name: "김아람",
     cohort: "크래프톤 정글 5기",
